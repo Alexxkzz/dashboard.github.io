@@ -1,0 +1,578 @@
+@font-face {
+    font-family: robotoRegular;
+    src: url(./fonts/Roboto/Roboto-Regular.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: robotoRegular;
+    outline: none;
+    border: none;
+}
+
+body{
+    background-color: #ecedf1 !important;
+}
+a{
+    text-decoration: none !important;
+    display: inline-block;
+}
+.padding-0{
+    padding: 0 !important;
+}
+.grid-1{
+    grid-template-columns: 100% !important;
+}
+.width-0{
+    width: 0!important;
+}
+.width-100{
+    width: 100!important;
+}
+.display-none{
+    display: none !important;
+}
+
+/* body */
+.grid-2{
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+/* logo Div */
+#mobileMenuDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100vh;
+    z-index: 200;
+    background-color: #f1f2f6;
+    color: #afafbf;
+    width: 0;
+    transition: all .1s linear;
+}
+#mobileMenuDiv ul{
+    list-style: none;
+}
+#mobileMenuDiv ul li a{
+    width: 100%;
+    padding: .8rem 0;
+    color:#afafbf;
+    /* border: 1px solid red; */
+    margin-bottom: .3rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+    display: none;
+}
+.closeButton{
+    font-size:2rem !important;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: #afafbf;
+    /* border: 1px solid red; */
+    margin-bottom: 0.3rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    text-align: right;
+    box-shadow: 5px 5px 6px 0px rgba(191,194,208,0.75),-5px -5px 8px  0px rgb(255,255,255);
+    -webkit-box-shadow: 5px 5px 6px 0px rgba(191,194,208,0.75),-5px -5px 8px  0px rgb(255,255,255);
+    -moz-box-shadow: 5px 5px 6px 0px rgba(191,194,208,0.75),-5px -5px 8px  0px rgb(255,255,255);
+}
+#closeMenuId{
+    text-align: right;
+}
+.nav-Overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index:50;
+    visibility: hidden;
+    opacity: 0; 
+}
+.mobile-menu{
+    display: none;
+}
+.body{
+    width: 100%;
+    height: 100vh;
+    transition: all .3s linear;
+}
+.logoDiv{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.navigationDiv{
+    background-color: #f1f2f6;
+    padding-left: 1rem;
+    height: 100%;
+   
+    -webkit-box-shadow: 5px 0px 27px 5px rgba(0,0,0,0.22);
+    -moz-box-shadow: 5px 0px 27px 5px rgba(0,0,0,0.22);
+    box-shadow: 5px 0px 27px 5px rgba(0,0,0,0.22);
+}
+.menuListDiv{
+    padding-top: 1rem;
+    padding-right: 1rem;
+}
+.menuListDiv ul{
+    padding-left: 0!important;
+}
+.menuListDiv ul li{
+    list-style: none;
+}
+.menuListDiv ul li a{
+    width: 100%;
+    padding: 1rem 0;
+    color:#afafbf;
+    /* border: 1px solid red; */
+    margin-bottom: .3rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+}
+.box-shadow{
+    box-shadow: -2px -2px 5px 0px #ffffff inset,1px 1px 5px 0px #c0c8d6 inset;
+    -webkit-box-shadow: -2px -2px 5px 0px #ffffff inset,1px 1px 5px 0px #c0c8d6 inset;;
+    -moz-box-shadow:  -2px -2px 5px 0px #ffffff inset,1px 1px 5px 0px #c0c8d6 inset;;
+    
+}
+.menuListDiv ul li a:hover{
+    color: #000;
+}
+.fa-solid{
+    margin-right: .9rem;
+    margin-left: .9rem;
+}
+
+input[type="text"]{
+    background-color: #f1f2f6 !important;
+    box-shadow: -2px -2px 5px 0px #ffffff inset,1px 1px 5px 0px #c0c8d6 inset;
+    -webkit-box-shadow: -2px -2px 5px 0px #ffffff inset,1px 1px 5px 0px #c0c8d6 inset;;
+    -moz-box-shadow:  -2px -2px 5px 0px #ffffff inset,1px 1px 5px 0px #c0c8d6 inset;;
+}
+
+/* content div */
+.contentDiv{
+    padding-right: 2rem;
+    padding-left: 1rem;
+}
+.profileDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 0;
+}
+#searchText{
+    padding: .5rem 4rem .5rem 1rem;
+    border-radius: 6px;
+    color: #afafbf;
+    font-size: 1rem;
+    margin-left: 1rem;
+    font-weight: 400;
+}
+#searchButton{
+    font-size: 1.2rem;
+    padding: .4rem 0;
+    background-color: #edeef1;
+    color: #afafbf;
+    border-radius: 6px;
+}
+.notificationDiv{
+    text-align: right;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.profileAnkles{
+    font-size: 1.2rem;
+    padding:   .4rem 0;
+    background-color: #edeef1;
+    color: #afafbf;
+    border-radius: 6px;
+    margin-right: 1rem;
+}
+.neoButtons{
+    box-shadow: 5px 5px 6px 0px rgba(191,194,208,0.75),-5px -5px 8px  0px rgb(255,255,255);
+    -webkit-box-shadow: 5px 5px 6px 0px rgba(191,194,208,0.75),-5px -5px 8px  0px rgb(255,255,255);
+    -moz-box-shadow: 5px 5px 6px 0px rgba(191,194,208,0.75),-5px -5px 8px  0px rgb(255,255,255);
+    font-size: 1.2rem !important;
+    padding:   .4rem 0 !important;
+    background-color: #edeef1 !important;
+    color: #afafbf !important;
+    border-radius: 6px !important;
+
+}
+.profileSpan figure{
+    margin: 0!important;
+}
+.profileSpan p{
+    margin: 0 !important;
+    padding-left: 1rem;
+}
+#mobilemenuButton{
+    display: none;
+}
+
+/* main div */
+
+.animationNumberDiv{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 1.2rem;
+    padding-right: 0;
+    grid-gap: 1rem;
+    margin-top: .5rem;
+}
+.animationDivs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-radius: 10px;
+    /* border: 1px solid black; */
+    grid-gap: 1rem;
+    padding: .8rem;
+    background-color: #f1f2f6;
+    box-shadow: 5px 5px 8px 0px rgba(191,194,208,0.75),-5px 0px 6px 1px rgb(255,255,255);
+    -webkit-box-shadow: 5px 5px 8px 0px rgba(191,194,208,0.75),-5px 0px 6px 1px rgb(255,255,255);
+    -moz-box-shadow: 5px 5px 8px 0px rgba(191,194,208,0.75),-5px 0px 6px 1px rgb(255,255,255);
+}
+.heading{
+    color: #afafbf;
+    font-size: .8rem;
+}
+.numbers{
+    margin-top:2rem;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.animatedImg{
+    width: 100%;
+}
+.animatedImg img{
+    width: 100%;
+}
+
+/* chart js graph div */
+h2{
+    font-weight: 500;
+}
+.graphParentDiv{
+    display: grid;
+    margin-top: 1rem;
+    grid-template-columns: 70% 30%;
+    grid-gap: 2rem;
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1.2rem;
+}
+.graphDiv{
+    background-color: #f1f2f6;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 8px 0px rgba(191,194,208,0.75),-5px 0px 6px 1px rgb(255,255,255);
+    -webkit-box-shadow: 5px 5px 8px 0px rgba(191,194,208,0.75),-5px 0px 6px 1px rgb(255,255,255);
+    -moz-box-shadow: 5px 5px 8px 0px rgba(191,194,208,0.75),-5px 0px 6px 1px rgb(255,255,255);
+}
+#myChart{
+    width: 100% !important;
+    height: 350px;
+}
+#myChartTwo{
+    width: 100% !important;
+    height: 350px;
+}
+
+/* data tables div */
+.dataTableDiv{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 0 2rem;
+    grid-gap: 3rem;
+}
+.skills-bar .bar{
+    margin: 10px 0;
+    background-color: #f1f2f6;
+    padding:1rem .7rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px 0px rgba(191,194,208,0.75),-5px 0px 6px 1px rgb(255,255,255);
+    -webkit-box-shadow: 5px 5px 8px 0px rgba(191,194,208,0.75),-5px 0px 6px 1px rgb(255,255,255);
+    -moz-box-shadow: 5px 5px 8px 0px rgba(191,194,208,0.75),-5px 0px 6px 1px rgb(255,255,255);
+}
+.skills-bar .bar .info{
+    margin-bottom: 1rem;
+}
+.skills-bar .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText  {
+    100%{
+        opacity: 1;
+    }
+}
+.skills-bar .bar .progress-line{
+    position: relative;
+    height: 7px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),0px 1px rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line span{
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    background: #6665ee;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.progress-line.shoes span{
+    width: 58% ;
+}
+.progress-line.dresses span{
+    width: 78%;
+}
+.progress-line.pants span{
+    width: 68%;
+}
+.progress-line.watches span{
+    width: 58%;
+}
+.progress-line.shirts span{
+    width: 88%;
+}
+.bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+.bar .progress-line span::after{
+    position: absolute;
+    right: 0;
+    top: -25px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 1px 8px;
+    border-radius: 3px;
+    background-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2  {
+    100%{
+        opacity: 1;
+    }
+}
+.progress-line.shoes span::after{
+    content: "58%" !important;
+}
+.progress-line.dresses span::after{
+    content: "78%";
+}
+.progress-line.pants span::after{
+    content: "68%";
+}
+.progress-line.watches span::after{
+    content: "58%";
+}
+.progress-line.shirts span::after{
+    content: "88%";
+}
+
+/* Tables div */
+table{
+    border-collapse: collapse;
+}
+.doneButton{
+    background-color: #6665ee;
+    border-radius: 10px;
+    padding: 0 .5rem;
+    color: #edeef1;
+}
+.cancelledButton{
+    background-color: #ff9574;
+    border-radius: 10px;
+    padding: 0 .5rem;
+    color: #edeef1;
+}
+.progressButton{
+    background-color: #f8cf5b;
+    border-radius: 10px;
+    padding: 0 .5rem;
+    color: #edeef1;
+}
+.tableRow{
+    background-color: #f1f2f6;
+    margin: 2rem 0 !important;
+    border-radius: 50px !important;
+}
+#myTable{
+    cursor: pointer;
+}
+#myTable_length{
+    width: 50%;
+    display: inline-block;
+}
+#myTable_filter{
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+}
+#myTable_info{
+    width: 50%;
+    display: inline-block;
+}
+#myTable_paginate{
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+}
+#showLabel{
+    background-color: #f1f2f6 !important;
+}
+.table-box{
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 5px 5px 8px 0px rgba(191,194,208,0.75),-5px 0px 6px 1px rgb(255,255,255);
+    -webkit-box-shadow: 5px 5px 8px 0px rgba(191,194,208,0.75),-5px 0px 6px 1px rgb(255,255,255);
+    -moz-box-shadow: 5px 5px 8px 0px rgba(191,194,208,0.75),-5px 0px 6px 1px rgb(255,255,255);
+}
+
+
+
+/* Responsive Design */
+@media (max-width:1200px) {
+    .menuListDiv ul li a{
+        font-size: 1rem;
+    }
+}
+@media (max-width:1100px) {
+    #mobilemenuButton{
+        display: inline-block !important;
+    }
+    #menuButton{
+        display: none !important;
+    }
+    .navigationDiv{
+        display: none;
+    }
+  
+}
+@media (max-width:1000px){
+   
+    .grid-2{
+        grid-template-columns: 100%;
+    }
+}
+
+@media (max-width:900px) {
+    .notificationDiv{
+        display: none;
+    }
+    .heading{
+        font-size: .7rem;
+    }
+    .numbers {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+    .profileDiv{
+        grid-template-columns: 1fr;
+    }
+    #searchButton{
+        float: right;
+       
+    }
+    #searchText{
+        float: right;
+    }
+    .animationDivs{
+        grid-gap: 0rem;
+    }
+    .mobile-menu{
+        display: block;
+    }
+}
+@media (max-width:800px) {
+    .animationNumberDiv{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .animatedImg img {
+        width: 70%;
+    }
+    .animatedImg{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .graphParentDiv{
+        grid-template-columns: 1fr;
+    }
+    .dataTableDiv {
+        grid-template-columns: 100%;
+    }
+    .contentDiv {
+        padding-right: 0rem;
+        padding-left: 0rem;
+    }
+    .graphParentDiv{
+        padding: 0 .5rem;
+       padding-bottom: 2rem;
+    }
+    .dataTableDiv{
+        padding: 0 .5rem;
+    }
+    .animationNumberDiv{
+        padding: .5rem;
+    }
+    #searchText {
+        float: none;
+        margin-left: 1rem;
+    }
+    #mobilemenuButton{
+        margin: 0;
+        margin-left: .7rem;
+    }
+}
+@media (max-width:500px){
+    .animationNumberDiv{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:400px){
+    #searchText {
+        display: none;
+    }
+}

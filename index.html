@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/616d889ddf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="mobileMenuDiv">
+        <ul>
+            <li><a href="javascript:void(0)" id="closeMenuId"><span class="closeButton">&times;</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-house-user"></i>Dashboard</a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-arrow-down"></i>Products</a></li>
+            <li><a href="#"><i class="fa-solid fa-people-group"></i>Clients</a></li>
+            <li><a href="#"><i class="fa-solid fa-comment"></i>Chat</a></li>
+            <li class="mobile-menu"><a href="#"><i class="fa-solid fa-bell"></i>Notifications</a></li>
+            <li class="mobile-menu"><a href="#"><i class="fa-solid fa-gear"></i>Settings</a></li>
+           
+        </ul>
+    </div>
+
+    <div class="nav-Overlay"></div>
+
+    <div class="body grid-2" id="bodyid">
+        <div class="navigationDiv" id="navigation">
+            <div class="logoDiv grid-2 unit">
+                <figure style="width: 50%;" class="unit">
+                    <img src="images/logo.jpg" alt="logo" title="DashOn">
+                </figure>
+                <h2 style="display: inline-block; width: 50; margin-left: 1rem; padding-top: .3rem;">DashOn</h2>
+            </div>
+            <div class="menuListDiv unit" id="menuListDivs">
+                <ul class="unit">
+                    <li><a href="#" class="box-shadow"><i class="fa-solid fa-house-user"></i>Dashboard</a></li>
+                    <li><a href="#"><i class="fa-solid fa-cart-arrow-down"></i>Products</a></li>
+                    <li><a href="#"><i class="fa-solid fa-people-group"></i>Clients</a></li>
+                    <li><a href="#"><i class="fa-solid fa-comment"></i>Chat</a></li>
+                </ul>
+            </div>
+           
+        </div>
+        <div class="contentDiv" id="content">
+            <div class="profileDiv">
+                <div>
+                    <form action="#" method="post">
+                        <a href="javascript:void(0)" class="profileAnkles neoButtons" id="menuButton"><i class="fa-solid fa-bars"></i></a>
+                        <a href="javascript:void(0)" class="profileAnkles neoButtons" id="mobilemenuButton" ><i class="fa-solid fa-bars"></i></a>
+                        <input type="text" id="searchText" name="search" id="search" placeholder="Search">
+                        <a href="javascript:void[0]" id="searchButton" class="profileAnkles neoButtons"><i class="fa-solid fa-magnifying-glass "></i></a>
+                    </form>
+                </div>
+                <div class="notificationDiv">
+                    <a href="" class="profileAnkles neoButtons" ><i class="fa-solid fa-bell"></i></a>
+                    <a href=""  class="profileAnkles neoButtons"><i class="fa-solid fa-gear"></i></a>
+                    <a href=""><span style="display: flex; align-items: center;" class="profileSpan">
+                        <figure style="display: inline-block; margin-right: 1rem;">
+                            <img src="images/woman-g1f929be83_1280.jpg" alt="profilephoto" width="50" height="40"
+                            style="border-radius: 50%;">
+                        </figure>
+                        <p style=" display: inline-block; align-items: center;justify-content: center; color: #afafbf;">Emma Kwan</p>
+                    </span></a>
+                </div>
+            </div>
+
+            <div class="mainDiv">
+                <h2 style="padding-left: 1rem;">Analytics Overview</h2>
+                <div class="animationNumberDiv">
+                    <div class="animationDivs">
+                        <div>
+                            <p class="heading">Total Earns</p>
+                            <p class="numbers" data-target="2056"></p>
+                        </div>
+                        <div class="animatedImg">
+                            <figure class="animatedImg">
+                                <img src="images/totalEarns.jpg" alt="info">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="animationDivs">
+                        <div>
+                            <p class="heading">Total Orders</p>
+                            <p class="numbers" data-target="7456"></p>
+                        </div>
+                        <div>
+                            <figure class="animatedImg">
+                                <img src="images/totalEarnsTwo.jpg" alt="info">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="animationDivs">
+                        <div>
+                            <p class="heading">Total Clients</p>
+                            <p class="numbers" data-target="4657"></p>
+                        </div>
+                        <div>
+                            <figure class="animatedImg">
+                                <img src="images/totalEarns.jpg" alt="info">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="animationDivs">
+                        <div>
+                            <p class="heading">Total Products</p>
+                            <p class="numbers" data-target="4765"></p>
+                        </div>
+                        <div>
+                            <figure class="animatedImg">
+                                <img src="images/totalEarnsTwo.jpg" alt="info">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chart js graphs -->
+            <div class="graphParentDiv">
+                <div class="barChartDiv graphDiv">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="pirChartDiv graphDiv">
+                    <canvas id="myChartTwo" style="margin-top: 2rem;"></canvas>
+                </div>
+            </div>
+
+            <!-- Data tables -->
+            <div class="dataTableDiv" id="dataTableDivs">
+                <div class="progressDiv" id="progress">
+                    <h2 style="margin-bottom: 2rem;">Best Selling Prices</h2>
+                    <div class="skills-bar">
+                        <div class="bar">
+                            <div class="info bar-child-1">
+                                <span>Shoes</span>
+                            </div>
+                            <div class="progress-line shoes bar-child-2">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="info bar-child-1">
+                                <span>Dresses</span>
+                            </div>
+                            <div class="progress-line dresses bar-child-2">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="info bar-child-1">
+                                <span>Pants</span>
+                            </div>
+                            <div class="progress-line pants bar-child-2">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="info bar-child-1">
+                                <span>Watches</span>
+                            </div>
+                            <div class="progress-line watches bar-child-2">
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="bar">
+                            <div class="info bar-child-1">
+                                <span>Shirts</span>
+                            </div>
+                            <div class="progress-line shirts bar-child-2">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recentOrder">
+                    <h2>
+                        Recent Orders
+                    </h2>
+                    <div>
+                        <div class="table-responsive table-box">
+                            <table class="table caption-top">
+                                <caption></caption>
+                                <thead>
+                                <tr>
+                                    <th scope="col">INVOICE</th>
+                                    <th scope="col">PRODUCT NAME</th>
+                                    <th scope="col">CLIENT</th>
+                                    <th scope="col">DATE</th>
+                                    <th scope="col">PRICE</th>
+                                    <th scope="col">STATUS</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>09675483</td>
+                                    <td>bob</td>
+                                    <td>20-2-2020</td>
+                                    <td>$200</td>
+                                    <td><span class="doneButton">Done</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>09675483</td>
+                                    <td>bob</td>
+                                    <td>20-2-2020</td>
+                                    <td>$200</td>
+                                    <td><span class="doneButton">Done</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>09675483</td>
+                                    <td>bob</td>
+                                    <td>20-2-2020</td>
+                                    <td>$200</td>
+                                    <td><span class="doneButton">Done</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>09675483</td>
+                                    <td>bob</td>
+                                    <td>20-2-2020</td>
+                                    <td>$200</td>
+                                    <td><span class="doneButton">Done</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>09675483</td>
+                                    <td>bob</td>
+                                    <td>20-2-2020</td>
+                                    <td>$200</td>
+                                    <td><span class="doneButton">Done</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>09675483</td>
+                                    <td>bob</td>
+                                    <td>20-2-2020</td>
+                                    <td>$200</td>
+                                    <td><span class="doneButton">Done</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>09675483</td>
+                                    <td>bob</td>
+                                    <td>20-2-2020</td>
+                                    <td>$200</td>
+                                    <td><span class="doneButton">Done</span></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>09675483</td>
+                                    <td>bob</td>
+                                    <td>20-2-2020</td>
+                                    <td>$200</td>
+                                    <td><span class="doneButton">Done</span></td>
+                                </tr>
+                                
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  
+
+    
+
+    <!-- Chart js Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>>
+
+    <!-- script js -->
+    <script src="index.js"></script>
+
+    <script>
+        
+    </script>
+</body>
+</html>
